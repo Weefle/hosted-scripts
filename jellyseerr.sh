@@ -33,8 +33,8 @@ function _deps() {
 
 function _jellyseerr_install() {
     echo "Downloading and extracting source code"
-    dlurl="$(curl -sS https://api.github.com/repos/Fallenbagel/jellyseerr/releases/latest | jq .tarball_url -r)"
-    wget "$dlurl" -q -O /home/${user}/jellyseerr.tar.gz >> "$log" 2>&1 || {
+    #dlurl="$(curl -sS https://api.github.com/repos/Fallenbagel/jellyseerr/releases/latest | jq .tarball_url -r)"
+    wget "https://api.github.com/repos/0-Pierre/jellyseerr/tarball/lidarr" -q -O /home/${user}/jellyseerr.tar.gz >> "$log" 2>&1 || {
         echo "Download failed"
         exit 1
     }
